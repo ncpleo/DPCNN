@@ -35,8 +35,7 @@ config = Config(sentence_max_size=50,
                 label_num=args.label_num,
                 learning_rate=args.lr,
                 cuda=args.gpu,
-                epoch=args.epoch,
-                out_channel=args.out_channel)
+                epoch=args.epoch)
 
 training_set = TextDataset(path='data/train')
 
@@ -53,7 +52,7 @@ if torch.cuda.is_available():
     embeds = embeds.cuda()
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=config.lr)
+optimizer = optim.SGD(model.parameters(), lr=config.lr, momentum = 0, weight_decay = 0)
 
 count = 0
 loss_sum = 0

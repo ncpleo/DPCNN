@@ -12,7 +12,7 @@ and put your data in '/data/train' or any other directory.
 run by
 
 ```
-python main.py --lr=0.001 --epoch=20 --batch_size=64 --gpu=0 --seed=0 --label_num=2			
+python main.py --lr=0.001 --epoch=20 --batch_size=64 --gpu=0 --seed=0 --label_num=2
 ```
 
 ## Evaluation 
